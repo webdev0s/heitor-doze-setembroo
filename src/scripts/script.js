@@ -11,17 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       collapseDropdown();
     }
-    isOpen = !isOpen;
+  });
+
+  // Adicione um evento de clique aos itens do menu
+  const menuItems = menu.querySelectorAll('li');
+  menuItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      collapseDropdown();
+    });
   });
 
   function expandDropdown() {
+    isOpen = true; // Atualiza o estado do menu para aberto
     menu.style.height = "auto"; // Defina inicialmente para "auto" para obter a altura total
     menu.classList.remove("hidden");
 
     const targetHeight = menu.scrollHeight;
     menu.style.height = "0"; // Redefina a altura para "0" para animação
 
-    const duration = 350; // 1 segundo
+    const duration = 350; // 0.35 segundos
     const paddingIncrement = 5; // 5% (valor fixo)
     let currentPadding = 0; // Inicializa o padding atual
 
@@ -50,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function collapseDropdown() {
+    isOpen = false; // Atualiza o estado do menu para fechado
+
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
     }
@@ -59,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.style.paddingTop = "5%"; // Define o padding inicial para 5%
 
     const targetHeight = 0;
-    const duration = 500; // 1 segundo
+    const duration = 500; // 0.5 segundos
     const paddingDecrement = 5; // 5% (valor fixo)
     let currentPadding = 5; // Inicializa o padding atual como 5% (valor máximo)
 
@@ -88,6 +98,26 @@ document.addEventListener("DOMContentLoaded", function () {
     animationFrameId = requestAnimationFrame(animate);
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".scroll-js a"); // Seleciona todos os links dentro das listas de navegação
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
 
 $('.slider-testimonial').slick({
   dots: true,
