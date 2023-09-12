@@ -8,7 +8,12 @@ module.exports = {
       backgroundImage: {
         'globe-pattern': "url(https://staging3.croptrak.com/wp-content/uploads/2023/08/bg-about.svg)",
         'contact-pattern': "url(https://croptrak.com/wp-content/uploads/2023/08/bg-contact.svg)",
-        'bg-img-espelho': "url(https://br.freepik.com/vetores-gratis/mulher-sorridente-feliz-admirando-o-belo-reflexo-no-espelho-orgulhoso-de-beleza-e-autoconfianca-como-ilustracao-vetorial-plana-de-personagem-feminina-bonita-narcisismo-amor-proprio-conceito-de-psicologia_22343829.htm#query=psychology&position=4&from_view=search&track=sph)",
+        'psy-img-mobile': "url('./src/img/priscilla-du-preez-mobile-unsplash.jpg')",
+        'especialidades-bg': "url('.././endless-constellation.svg')",
+        'psy-img-desktop': "url('/src/img/priscilla-du-preez-desktop-unsplash.jpg')",
+        'psy2-img-mobile': "url('/src/img/psi4.jpg')",
+        'psy2-img-desktop': "url('/src/img/psi4.jpg')",
+        'maosdadas': "url('.././src/img/bg-head.svg')",
       },
       backgroundPosition: {
         'mobile-position': 'center top 2%',
@@ -18,14 +23,26 @@ module.exports = {
         'contact-posit': 'left top 1px',
       },
       colors:{
-      'primary-white': '#FEFEFE',
+      'primary-white': '#FBFBFB',
       'primary-sea': '#769FCD',
-      'primary-sky': '#B9D7EA',
-      'primary-cloud': '#D6E6F2',
-      'primary-dark': '#040D12'
+      'primary-sky': '#AED2FF',
+      'primary-cloud': '#eaf3fb',
+      'primary-night': '#231F20',
+      'primary-navy': '#0D162B',
+      'primary-grape': '#17709C',
+      'primary-formulary': '#838383',
+      'primary-dropdown': '#666',
+      'secondary-dropdown': '#999',
+      'bg-dropdown': '#F9F9F9',
+      'primary-brown': '#A9907E',
+      'primary-darkgreen': '#263A29',
+      'primary-darkblue': '#0E2954',
+      'primary-checklist': '#1A5D1A',
+      'primary-questionBox': '#F6F5F5',
+      'primary-hover-questionBox': '#F6FFFF'
     },
       fontFamily: {
-        'primary-title': ['Cardo', 'serif'],
+        'primary-title': ['Cardo', 'IBM Plex Sans', 'sans-serif'],
         'primary-sans': ['IBM Plex Sans', 'sans-serif'],
         'primary-serif': ['IBM Plex Serif', 'serif'],
       },
@@ -42,6 +59,7 @@ module.exports = {
         '28px': '28px',
       },
       borderWidth:{
+        '1': '1px',
         '3px': '3px',
         '6': '6px',
         '10': '10px',
@@ -90,9 +108,12 @@ module.exports = {
         '17': '4.2rem',
         '13': '3.25rem',
         '1.05rem': '1.05rem',
+        '1932px': '1932px',
+        '675px': '675px',
         '468px': '468px',
         '340px': '340px',
         '300px': '300px',
+        '250px': '250px',
         '170px': '170px',
         '145px': '145px',
         '130px': '130px',
@@ -117,6 +138,12 @@ module.exports = {
         '5px': '5px',
         '3px': '3px',
         '2px': '2px',
+        '3%': '3%',
+        '1000px': '1000px',
+        '500px': '500px',
+        '106.5px': '106.5px',
+        '152px': '152px',
+        '52px': '52px'
       },
       rotate:{
         '45': '-45deg'
@@ -125,10 +152,12 @@ module.exports = {
         '1340px': '1340px',
         '1240px': '1240px',
         '1102px': '976.5px',
+        '1080px': '1080px',
         '938px': '938px',
         '655px': '655px',
         '586px': '586px',
         '550px': '550px',
+        '450px': '450px',
         '97%' : '97%',
         '95%' : '95%', 
         '92%': '92%',
@@ -148,6 +177,7 @@ module.exports = {
         '40%': '40%',
         '1/2': '50%',
         'smallcustom': '21rem',
+        '29px': '29px',
         '71px': '71px',
         '91px': '91px',
         '100px': '100px',
@@ -163,11 +193,17 @@ module.exports = {
         '303px': '303px',
         '595px': '595px',
         '611px': '611px',
-        '400px': '400px'
+        '50px': '50px',
+        '30px': '30px',
+        '40px': '40px',
+        '350px':'350px',
+        '1000px': '1000px',
+        '152px': '152px'
       },
       width: {
         '93%' : '93%',
         '90%' : '90%',
+        '55%': '55%',
         '815.844px': '815.844px',
         '72.27%': '850.812px',
         '72.07%': '72.07%',
@@ -177,9 +213,9 @@ module.exports = {
         'text' : '70%',
         'textl': '73%',
         '200px': '200px',
-        '70%': '70%'
       },
       height: {
+        '938px': '938px',
         '526px': '526px',
         '360px': '360px',
         '108px': '108px',
@@ -194,11 +230,10 @@ module.exports = {
         '85%' : '85%',
         '300px': '300px',
         '1/4': '25%',
-        '400px': '400px'
       },
       screens: {
         'tablet': '768px',
-        'laptop': '980px',
+        'laptop': '1000px',
         'desktop': '1400px',
       },
       
