@@ -714,14 +714,14 @@ video {
 
 @keyframes slideUp {
   from {
-    height: 140px;
+    max-height: 300px;
     /* Start with the desired height */
     margin-top: 16px;
     padding-bottom: 12px;
   }
 
   to {
-    height: 0;
+    max-height: 0;
     /* Collapse to a height of 0 */
     margin-top: 0px;
     padding-bottom: 0px;
@@ -1420,14 +1420,14 @@ video {
   position: absolute;
 }
 
-.before\:-left-20::before {
-  content: var(--tw-content);
-  left: -5rem;
-}
-
 .before\:-left-52::before {
   content: var(--tw-content);
   left: -13rem;
+}
+
+.before\:-left-half::before {
+  content: var(--tw-content);
+  left: -50%;
 }
 
 .before\:top-0::before {
@@ -1460,6 +1460,12 @@ video {
   width: 100%;
 }
 
+.before\:translate-x-2\/4::before {
+  content: var(--tw-content);
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .before\:rounded-r-3xl::before {
   content: var(--tw-content);
   border-top-right-radius: 1.5rem;
@@ -1477,11 +1483,6 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
-.before\:bg-opacity-90::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 0.9;
-}
-
 .before\:bg-maosdadas::before {
   content: var(--tw-content);
   background-image: url('.././src/img/bg-head.svg');
@@ -1492,9 +1493,9 @@ video {
   background-size: cover;
 }
 
-.before\:bg-left-bottom::before {
+.before\:bg-center::before {
   content: var(--tw-content);
-  background-position: left bottom;
+  background-position: center;
 }
 
 .before\:bg-left-top::before {
