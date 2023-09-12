@@ -1112,6 +1112,14 @@ video {
   --tw-gradient-to: #231F20 var(--tw-gradient-to-position);
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -1577,6 +1585,10 @@ video {
 
   .tablet\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tablet\:bg-fixed {
+    background-attachment: fixed;
   }
 
   .tablet\:text-center {
