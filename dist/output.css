@@ -1065,11 +1065,6 @@ video {
   --tw-border-opacity: 0.2;
 }
 
-.bg-cyan-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
-}
-
 .bg-primary-darkblue {
   --tw-bg-opacity: 1;
   background-color: rgb(14 41 84 / var(--tw-bg-opacity));
@@ -1274,11 +1269,6 @@ video {
 
 .text-40px {
   font-size: 40px;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .text-lg {
@@ -1600,6 +1590,11 @@ video {
 
   .tablet\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .tablet\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 }
